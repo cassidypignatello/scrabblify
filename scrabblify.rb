@@ -9,7 +9,7 @@ class Scrabblify
 
   # Initialize with user input for a word
   def initialize
-    puts "Please enter a word:"
+    puts "Welcome to Scrabblify! Please enter a word:"
     ask_user_word
     if user_word.length < 2
       puts "Hmm, I don't think that really counts. Try again!"
@@ -31,7 +31,7 @@ class Scrabblify
     @score = user_word.each_char do |c|
       points += LETTER_VALUES[c.to_sym]
     end
-    puts points
+    puts "You'll score #{points} total points if you play #{user_word.downcase}."
   end
 end
 

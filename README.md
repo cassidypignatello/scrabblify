@@ -1,0 +1,1 @@
+An app that computes the scrabble score for any given word.

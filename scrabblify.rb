@@ -15,12 +15,23 @@ class Scrabblify
       puts "Hmm, I don't think that really counts. Try again!"
       Scrabblify.new
     else
-      puts user_word
+      score
     end
   end
 
+  # Asks for user word and sanitizes input
   def ask_user_word
     @user_word = gets.strip.upcase
+  end
+
+  # Calculates the score by taking the user's word and comparing each char to its value
+  # in the letter values hash, and incrementing the points variable according to that value
+  def score
+    points = 0
+    @score = user_word.each_char do |c|
+      points += LETTER_VALUES[c.to_sym]
+    end
+    puts points
   end
 end
 

@@ -1,1 +1,1 @@
-An app that computes the scrabble score for any given word.
+An app that lets you ~~cheat at~~ strategize how you play Scrabble by giving you the score for any word from the command line.
